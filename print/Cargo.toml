@@ -1,0 +1,13 @@
+[package]
+name = "print"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+name = "print"
+edition = "2018"
+crate-type = ["staticlib"]
+path = "src/lib.rs"
+
+[dependencies]
+fk_std = "0.1.1"

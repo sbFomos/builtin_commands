@@ -1,0 +1,7 @@
+{
+  "name": "print",
+  "command": true,
+  "application": false,
+  "description": "Used for printing any arguments given in the command line for FOMOS.",
+  "language": "Rust"
+}
