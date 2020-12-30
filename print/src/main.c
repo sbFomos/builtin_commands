@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 extern int print(char *arg);
 
 int main( int argc, char *argv[] )  {
