@@ -1,7 +1,4 @@
 #![no_std]
-#![feature(lang_items)]
-
-mod lang;
 
 const L1: &str = "Never gonna give you up\n\0";
 const L2: &str = "Never gonna let you down\n\0";
@@ -29,7 +26,7 @@ type c_char = i8;
 extern "C" { fn printf(format: *const c_char) -> i32; }
 
 #[no_mangle]
-pub extern "C" fn print(arg: &str) {
-    unsafe { printf(arg.as_ptr() as *const _); }
-    unsafe { printf("\n\0".as_ptr() as *const _); }
+pub extern "C" fn print_main(arg: &str) {
+    unsafe { printf(arg.as_ptr() as *const c_char); }
+    unsafe { printf("\n".as_ptr() as *const c_char); }
 }

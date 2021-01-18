@@ -1,0 +1,13 @@
+[package]
+name = "builtin_commands"
+version = "0.1.0"
+authors = ["The sbFomos developers"]
+edition = "2018"
+
+[workspace]
+members = [
+    "print/",
+]
+
+[dependencies]
+print = { path = "print/" }
