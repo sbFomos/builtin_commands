@@ -8,13 +8,13 @@ extern "C" {
 }
 
 pub fn asku_main() {
-    for mut i in 0..3 {
+    for mut _i in 0..3 {
         printfk!("[ asku ] Enter user password: \0");
-        let mut password = unsafe { checkPassword() };
+        let password = unsafe { checkPassword() };
         if password == 0 {
             printfk!("asku - Incorrect Password\n\0");
         } else {
-            i = 3
+            break
         }
     }
 }
