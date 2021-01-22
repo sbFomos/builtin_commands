@@ -7,7 +7,7 @@ pub fn space() -> &'static str {
     "\n\0"
 }
 
-pub extern fn print_main(arg: &str) {
+pub fn print_main(arg: &str) {
     unsafe { printf(arg.as_ptr() as *const c_char); }
     unsafe { printf(space().as_ptr() as *const c_char); }
 }

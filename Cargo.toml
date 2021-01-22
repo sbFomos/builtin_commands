@@ -7,7 +7,9 @@ edition = "2018"
 [workspace]
 members = [
     "print/",
+    "asku/",
 ]
 
 [dependencies]
 print = { path = "print/" }
+asku = { path = "asku/" }
