@@ -1,0 +1,12 @@
+[package]
+name = "shutdown"
+version = "0.1.0"
+authors = ["NathanMcMillan54 <nathanmcmillan54@gmail.com>"]
+edition = "2018"
+
+[build-dependencies]
+cc = "1.0.66"
+
+[dependencies]
+libc = "0.2.82"
+asku = { path = "../asku/" }

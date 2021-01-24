@@ -8,8 +8,10 @@ edition = "2018"
 members = [
     "print/",
     "asku/",
+    "shutdown/",
 ]
 
 [dependencies]
 print = { path = "print/" }
 asku = { path = "asku/" }
+shutdown = { path = "shutdown/" }

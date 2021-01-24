@@ -1,7 +1,7 @@
 #![no_std]
 
 extern crate libc;
-use libc::{c_char, c_int, printf};
+use libc::{c_char, printf};
 
 pub fn space() -> &'static str {
     "\n\0"
