@@ -18,7 +18,7 @@ pub fn help_main(arg: &str) {
     unsafe {
         if arg == "all" {
             all();
-        } else if arg == "asku" {
+        } /* else if arg == "asku" {
             libc::printf(asku::ASKU.as_ptr() as *const libc::c_char);
         } else if arg == "print" {
             libc::printf(print::PRINT.as_ptr() as *const libc::c_char);
@@ -26,6 +26,6 @@ pub fn help_main(arg: &str) {
             libc::printf(help::HELP.as_ptr() as *const libc::c_char);
         } else if arg == "shutdown" {
             libc::printf(shutdown::SHUTDOWN.as_ptr() as *const libc::c_char);
-        }
+        } */ else { libc::printf("Not an argument".as_ptr() as *const libc::c_char); }
     }
 }
