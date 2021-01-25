@@ -20,10 +20,10 @@ pub fn help_main(arg: &str) {
             all();
         } else if arg == "asku" {
             libc::printf(asku::ASKU.as_ptr() as *const libc::c_char);
-        } else if arg == "help" {
-            libc::printf(help::HELP.as_ptr() as *const libc::c_char);
         } else if arg == "print" {
             libc::printf(print::PRINT.as_ptr() as *const libc::c_char);
+        } else if arg == "help" {
+            libc::printf(help::HELP.as_ptr() as *const libc::c_char);
         } else if arg == "shutdown" {
             libc::printf(shutdown::SHUTDOWN.as_ptr() as *const libc::c_char);
         }
