@@ -19,7 +19,7 @@ pub fn help_main(arg: &str) {
         if arg == "all" {
             all();
         } else if arg == "asku" {
-            libc::printf(print::PRINT.as_ptr() as *const libc::c_char);
+            libc::printf(asku::ASKU.as_ptr() as *const libc::c_char);
         } else if arg == "help" {
             libc::printf(help::HELP.as_ptr() as *const libc::c_char);
         } else if arg == "print" {
