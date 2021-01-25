@@ -15,17 +15,15 @@ unsafe fn all() {
 }
 
 pub fn help_main(arg: &str) {
-    unsafe {
-        if arg == "all" {
-            all();
-        } else if arg == "asku" {
-            libc::printf(asku::ASKU.as_ptr() as *const libc::c_char);
-        } else if arg == "print" {
-            libc::printf(print::PRINT.as_ptr() as *const libc::c_char);
-        } else if arg == "help" {
-            libc::printf(help::HELP.as_ptr() as *const libc::c_char);
-        } else if arg == "shutdown" {
-            libc::printf(shutdown::SHUTDOWN.as_ptr() as *const libc::c_char);
-        } else { libc::printf("Not an argument".as_ptr() as *const libc::c_char); }
+    if arg == "all" {
+        unsafe { all(); }
+    } else if arg == "asku" {
+        unsafe { libc::printf(asku::ASKU.as_ptr() as *const libc::c_char); }
+    } else if arg == "print" {
+        unsafe { libc::printf(print::PRINT.as_ptr() as *const libc::c_char); }
+    } else if arg == "help" {
+        unsafe { libc::printf(help::HELP.as_ptr() as *const libc::c_char); }
+    } else if arg == "shutdown" {
+        unsafe { libc::printf(shutdown::SHUTDOWN.as_ptr() as *const libc::c_char); }
     }
 }
