@@ -9,11 +9,9 @@ members = [
     "print/",
     "asku/",
     "shutdown/",
-    "help/",
 ]
 
 [dependencies]
 print = { path = "print/" }
 asku = { path = "asku/" }
 shutdown = { path = "shutdown/" }
-help = { path = "help/" }

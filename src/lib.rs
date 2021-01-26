@@ -9,5 +9,3 @@ pub use asku::asku_main;
 extern crate shutdown;
 pub use shutdown::shutdown_main;
 
-extern crate help;
-pub use help::help_main;
