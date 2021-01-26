@@ -15,6 +15,7 @@ unsafe fn all() {
 }
 
 pub fn help_main(arg: &str) {
+    unsafe { libc::printf(arg.as_ptr() as *const libc::c_char); }
     let mut i = 0;
     if arg == "all" {
         i = i + 0;
