@@ -10,6 +10,7 @@ members = [
     "asku/",
     "shutdown/",
     "makefile/",
+    "editfile/",
 ]
 
 [dependencies]
@@ -17,3 +18,4 @@ print = { path = "print/" }
 asku = { path = "asku/" }
 shutdown = { path = "shutdown/" }
 makefile = { path = "makefile/" }
+editfile = { path = "editfile/" }

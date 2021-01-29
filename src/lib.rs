@@ -11,3 +11,6 @@ pub use shutdown::shutdown_main;
 
 extern crate makefile;
 pub use makefile::makefile_main;
+
+extern crate editfile;
+pub(crate) use editfile::editfile_main;

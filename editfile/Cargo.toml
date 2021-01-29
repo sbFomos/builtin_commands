@@ -1,11 +1,8 @@
 [package]
-name = "makefile"
+name = "editfile"
 version = "0.1.0"
 authors = ["NathanMcMillan54 <nathanmcmillan54@gmail.com>"]
 edition = "2018"
-
-[dependencies]
-editfile = { path = "../editfile/" }
 
 [build-dependencies]
 cc = "1.0.66"
