@@ -4,9 +4,9 @@ void makefile(char file_name) {
     FILE *fp;
     fp = fopen(&file_name, "w");
     if (fp == NULL) {
-        printf("Couldn't create file: %s", &file_name);
+        printf("Couldn't create file: %s\n", file_name);
     } else {
-        printf("%s created successfully\n", &file_name);
+        printf("%s created successfully\n", file_name);
     }
     fclose(fp);
 }

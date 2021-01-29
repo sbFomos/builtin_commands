@@ -1,0 +1,51 @@
+Command example:
+
+Rust
+
+    #![no_std]
+
+    extern crate libc;
+
+    pub fn commandname_main(arg: <type>) {
+        unsafe { libc::printf(arg as *const libc::c_char);
+    }
+
+C
+
+    #include<stdio.h>
+
+    int commandname_main(<type> arg) {
+        printf(arg);
+        return 0;
+    }
+
+Commands should start with a function with the command's name. This is like the main function in a normal C/Rust file.
+If you're using Rust to make a command, you need to be using #![no_std]. You can use the C standard library (stdio.h,
+stdlib.h, unistd.h).
+
+Install FOMOSv2-CL from https://github.com/sbFomos/FOMOSv2-Cl/
+When you add your command to FOMOS, add it to the dependencies of fomos/Cargo.toml
+
+fomos/Cargo.toml
+
+[dependencies]
+command = <version/path/git>
+
+To call your command from FOMOS, you need to add it to the if statement to check what command was inputted in
+fomos/src/cl/command.c
+
+fomos/src/cl/command.c
+
+else if (!strcmp(commandName, "your command")) {
+    run_command(<command number>, commandArgume);
+}
+
+For your command to actually get called you need to add your main function to fomos/src/cl/cl.rs
+
+fomos/src/cl/cl.rs
+
+else if command == <command number> {
+    commandName::comandname_main(arguments);
+}
+
+Now compile FOMOS and see if the command works!
