@@ -9,3 +9,5 @@ pub use asku::asku_main;
 extern crate shutdown;
 pub use shutdown::shutdown_main;
 
+extern crate makefile;
+pub use makefile::makefile_main;
