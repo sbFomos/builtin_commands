@@ -1,6 +1,7 @@
 #![no_std]
 
-extern crate libc;
+extern crate fk_std;
+use fk_std::libc::printf;
 extern crate asku;
 
 extern "C" {
@@ -8,8 +9,8 @@ extern "C" {
 }
 
 fn start_shutdown(ss: &str) {
-    let seconds = unsafe { libc::atoi(ss.as_ptr() as *const libc::c_char) };
-    unsafe { libc::printf("Shutting down...\n".as_ptr() as *const libc::c_char); }
+    let seconds = unsafe { fk_std::atoi(ss.as_ptr() as *const fk_std::c_char) };
+    unsafe { printf("Shutting down...\n".as_ptr() as *const fk_std::c_char); }
     unsafe { shutdown(seconds) }
 }
 

@@ -8,5 +8,5 @@ edition = "2018"
 cc = "1.0.66"
 
 [dependencies]
-libc = "0.2.82"
+fk_std = "0.3.3"
 asku = { path = "../asku/" }
